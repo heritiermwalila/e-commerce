@@ -1,0 +1,21 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.card{
+    background: #4b75e9;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+}
+.card_image img{
+    width: 250px;
+}
+.card_actions .btn{
+    margin: auto;
+}

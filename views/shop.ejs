@@ -1,0 +1,36 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/shop.css">
+    
+</head>
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <main>
+        <h1>All my products</h1>
+        <span>List of all my products</span>
+        <% if(prods.length > 0) {%>
+        <div class="grid">
+            <% for(let product of prods){%>
+            <article class="card product-item">
+                <header class="card-title">
+                    <h4 class="product_title">
+                        <%=product.title%>
+                    </h4>
+                    <div class="card_image">
+                        <img src="https://picsum.photos/360x200" alt="">
+                    </div>
+                    <div class="card_content">
+                        <h2 class="product_price">R44</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, est.</p>
+                    </div>
+                    <div class="card_actions">
+                        <button class="btn">Add product</button>
+                    </div>
+                </header>
+            </article>
+            <%}%>
+        </div>
+        <% } else { %>
+            <h1>No product available</h1>
+        <% } %>
+    </main>
+<%- include('includes/footer.ejs') %>

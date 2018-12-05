@@ -1,0 +1,22 @@
+extends layouts/main-layout.pug
+block styles
+    link(rel="stylesheet", href="/css/shop.css")
+block content
+    main
+        if prods.length > 0
+            .grid
+                each product in prods
+                    article.card.product-item
+                        header.card_header
+                            h4.product_title #{product.title}
+                        .card_image
+                            img(src="https://picsum.photos/360x200", alt="")
+                        .card_content
+                            h2.product_price R99
+                            p.product_description Generate Lorem Ipsum placeholder text. Select the number of characters, words, sentences or paragraphs, and hit generate!
+                        .card_actions
+                            button.btn add to cart
+        else
+            h1 No products
+
+        
